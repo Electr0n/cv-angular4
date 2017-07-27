@@ -1,0 +1,10 @@
+<div *ngIf="lang">
+  <h2>{{lang.name}}</h2>
+  <h2>Level: {{lang.lvl}}/10</h2>
+  <div>
+    <label>Skill: </label>
+    <input [(ngModel)]="lang.name" placeholder="name"/>
+    <label>Level: </label>
+    <input [(ngModel)]="lang.lvl" placeholder="name"/>
+  </div>
+</div>

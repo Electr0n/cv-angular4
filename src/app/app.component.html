@@ -2,14 +2,16 @@
   {{title}}: {{name}}
 </h1>
 
+<h2>
+  Choose language:
+</h2>
+
 <ul class="langs">
-  <li *ngFor="let lang of langs" (click)="onSelect(lang)">
+  <li *ngFor="let lang of langs" 
+    (click)="onSelect(lang)" 
+    [class.selected]="lang === selectedLang">
     <span class="badge">{{lang.id}}</span>
     <span>{{lang.name}}</span>
-    <span>{{lang.lvl}}</span>
   </li>
 </ul>
-
-<div *ngIf="selectedLang">
-  <h2>{{selectedLang.name}}</h2>
-</div>
+<lang-detail [lang]=selectedLang></lang-detail>

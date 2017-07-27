@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-
-export class Lang{
-  id: number;
-  name: string;
-  lvl: number;
-}
+import { Lang } from './lang';
 
 const LANGS: Lang[] = [
   { id: 1, name: 'Ruby', lvl: 6 },
